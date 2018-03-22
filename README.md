@@ -15,8 +15,11 @@ Create a db.json file
   ],
   "profile": { "name": "typicode" }
 }
-Start JSON Server
 
+Install
+$ npm install -g json-server
+
+Start JSON Server
 $ json-server --watch db.json
 Now if you go to http://localhost:3000/posts/1, you'll get
 
@@ -27,8 +30,7 @@ If you make POST, PUT, PATCH or DELETE requests, changes will be automatically a
 Your request body JSON should be object enclosed, just like the GET output. (for example {"name": "Foobar"})
 Id values are not mutable. Any id value in the body of your PUT or PATCH request wil be ignored. Only a value set in a POST request wil be respected, but only if not already taken.
 A POST, PUT or PATCH request should include a Content-Type: application/json header to use the JSON in the request body. Otherwise it will result in a 200 OK but without changes being made to the data.
-Install
-$ npm install -g json-server
+
 Routes
 Based on the previous db.json file, here are all the default routes. You can also add other routes using --routes.
 
